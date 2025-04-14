@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Топ-10 лучших сервисов для знакомств: 5 мобильных приложений и 5 компьютерных сервисов. Рейтинг, сравнение функций, плюсы и минусы каждого варианта.">
+    <meta name="keywords" content="топ приложений для знакомств, лучшие сайты знакомств, мобильные приложения для знакомств, сервисы для знакомств онлайн, сравнение dating-приложений">
+    <meta name="author" content="MillsCome">
+    <meta property="og:title" content="Топ-10 сервисов для знакомств | MillsCome">
+    <meta property="og:description" content="Рейтинг лучших мобильных и компьютерных сервисов для поиска отношений, друзей и партнеров.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://golpool092.github.io/dating-apps/">
+    <meta name="robots" content="index, follow">
+    <title>Топ-10 сервисов для знакомств на смартфонах и компьютерах | MillsCome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --dark: #212529;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: inline-block;
+            background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .search-results {
+            position: absolute;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            margin-top: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+        
+        .search-result-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .search-result-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .search-result-item h4 {
+            margin: 0;
+            color: var(--primary);
+        }
+        
+        .search-result-item p {
+            margin: 0.3rem 0 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .no-results {
+            padding: 1rem;
+            color: #666;
+            text-align: center;
+        }
+        
+        .highlight {
+            background-color: yellow;
+            color: black;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+        
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .category-card h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .subcategory {
+            margin-top: 1.5rem;
+        }
+        
+        .subcategory h3 {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .subcategory h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            background: #e9ecef;
+            color: #6c757d;
+            border: 2px solid #dee2e6;
+        }
+
+        .btn-disabled:hover {
+            transform: none;
+            box-shadow: none;
+            background: #e9ecef;
+            color: #6c757d;
+        }
+        
+        .ad-block {
+            background: linear-gradient(135deg, #f5f7fa, #e2e8f0);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+            border: 2px dashed var(--primary);
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .category-card {
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+        }
+        
+        .category-card:nth-child(1) { animation-delay: 0.1s; }
+        .category-card:nth-child(2) { animation-delay: 0.2s; }
+        .category-card:nth-child(3) { animation-delay: 0.3s; }
+        .category-card:nth-child(4) { animation-delay: 0.4s; }
+        
+        .app-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .app-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        .app-rating {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        
+        .stars {
+            color: #ffc107;
+            margin-right: 0.5rem;
+        }
+        
+        .app-platform {
+            display: inline-block;
+            padding: 0.3rem 0.6rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+        
+        .app-features {
+            margin: 1rem 0;
+        }
+        
+        .app-features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .app-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .app-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .app-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .app-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: #28a745;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .price-tag.free {
+            background: #28a745;
+        }
+        
+        .price-tag.paid {
+            background: #dc3545;
+        }
+        
+        .price-tag.freemium {
+            background: #ffc107;
+            color: #212529;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .theme-switcher {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .theme-toggle {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Dark mode styles */
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .theme-toggle {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.05);
+        }
+        
+        .dark-mode {
+            --dark: #f8f9fa;
+            --light: #212529;
+            --primary: #3a86ff;
+            --secondary: #2667cc;
+            background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+            color: #f0f0f0;
+        }
+        
+        .dark-mode .category-card,
+        .dark-mode .search-results,
+        .dark-mode .ad-block,
+        .dark-mode .app-card {
+            background: #2d2d2d;
+            color: #f0f0f0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .dark-mode .search-input {
+            background: #3d3d3d;
+            color: white;
+        }
+        
+        .dark-mode .app-features li::before {
+            color: var(--primary);
+        }
+        
+        .dark-mode .ad-block {
+            background: linear-gradient(135deg, #2d2d2d, #3d3d3d);
+            color: #f0f0f0;
+        }
+        
+        .dark-mode .app-image {
+            filter: brightness(0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-switcher">
+        <button class="theme-toggle" id="themeToggle">
+            <span>🌙</span> Тёмная тема
+        </button>
+    </div>
+    
+    <header>
+        <div class="container">
+            <a href="https://golpool092.github.io/main/" class="logo">MillsCome</a>
+            <p class="tagline">Топ-10 лучших сервисов для знакомств: 5 мобильных приложений и 5 компьютерных сервисов. Рейтинг и сравнение функций.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">Топ-10 сервисов для знакомств на смартфонах и компьютерах</h1>
+        
+        <div class="ad-block">
+            <h3 style="margin-top: 0;">Хотите предложить свой сервис для обзора?</h3>
+            <p>Напишите нам в Telegram и мы рассмотрим ваше предложение!</p>
+            <a href="https://t.me/MillsCome" class="btn" target="_blank">Написать в Telegram</a>
+        </div>
+        
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+            В этом обзоре мы собрали лучшие сервисы для знакомств - от поиска серьезных отношений до новых друзей и неформального общения. 
+            Первые 5 приложений работают на смартфонах, остальные 5 - веб-сервисы для компьютеров.
+        </p>
+        
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="categories">
+            <div class="category-card">
+                <h2>Мобильные приложения для знакомств</h2>
+                <p>Лучшие приложения для поиска партнеров на Android и iOS</p>
+                
+                <div class="app-card">
+                    <div class="app-badge">#1</div>
+                    <h3>Tinder</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>4.8/5</span>
+                        <span class="price-tag freemium">Freemium</span>
+                    </div>
+                    <span class="app-platform">Мобильное</span>
+                    <p>Самое популярное приложение для знакомств с системой свайпов</p>
+                    <img src="https://via.placeholder.com/600x400/4361ee/ffffff?text=Tinder" alt="Tinder интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Простая система свайпов (вправо - нравится, влево - нет)</li>
+                        <li>Геолокация для поиска людей рядом</li>
+                        <li>Премиум-функции: Super Like, Boost, Passport</li>
+                        <li>Интеграция с Instagram и Spotify</li>
+                        <li>Более 50 миллионов пользователей по всему миру</li>
+                    </ul>
+                    <a href="https://tinder.com/" class="btn" target="_blank">Скачать</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-badge">#2</div>
+                    <h3>Bumble</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>4.7/5</span>
+                        <span class="price-tag freemium">Freemium</span>
+                    </div>
+                    <span class="app-platform">Мобильное</span>
+                    <p>Приложение, где женщины делают первый шаг</p>
+                    <img src="https://via.placeholder.com/600x400/f72585/ffffff?text=Bumble" alt="Bumble интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Женщины инициируют общение в гетеросексуальных парах</li>
+                        <li>Таймер на ответ (24 часа)</li>
+                        <li>Режимы для поиска друзей (BFF) и бизнес-контактов (Bizz)</li>
+                        <li>Встроенная верификация профилей</li>
+                        <li>Фильтры по интересам и образу жизни</li>
+                    </ul>
+                    <a href="https://bumble.com/" class="btn" target="_blank">Скачать</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-badge">#3</div>
+                    <h3>Happn</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>4.5/5</span>
+                        <span class="price-tag freemium">Freemium</span>
+                    </div>
+                    <span class="app-platform">Мобильное</span>
+                    <p>Знакомства с людьми, которых вы встречали в реальной жизни</p>
+                    <img src="https://via.placeholder.com/600x400/3a0ca3/ffffff?text=Happn" alt="Happn интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Показывает людей, которые пересекались с вами в реальной жизни</li>
+                        <li>Карта с местами пересечений</li>
+                        <li>Функция "Hello" для приветствия без взаимного лайка</li>
+                        <li>Режим "Невидимка" для приватности</li>
+                        <li>Детальная статистика профиля</li>
+                    </ul>
+                    <a href="https://www.happn.com/" class="btn" target="_blank">Скачать</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-badge">#4</div>
+                    <h3>Grindr</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>4.4/5</span>
+                        <span class="price-tag freemium">Freemium</span>
+                    </div>
+                    <span class="app-platform">Мобильное</span>
+                    <p>Крупнейшее приложение для ЛГБТК+ сообщества</p>
+                    <img src="https://via.placeholder.com/600x400/4cc9f0/ffffff?text=Grindr" alt="Grindr интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Геолокационный поиск для быстрых встреч</li>
+                        <li>Фильтры по интересам, внешности и предпочтениям</li>
+                        <li>Функция "Племена" для поиска по типажу</li>
+                        <li>Встроенный чат с возможностью обмена фото</li>
+                        <li>Безопасность и конфиденциальность</li>
+                    </ul>
+                    <a href="https://www.grindr.com/" class="btn" target="_blank">Скачать</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-badge">#5</div>
+                    <h3>Mamba</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>4.3/5</span>
+                        <span class="price-tag freemium">Freemium</span>
+                    </div>
+                    <span class="app-platform">Мобильное</span>
+                    <p>Популярное приложение для знакомств в СНГ</p>
+                    <img src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Mamba" alt="Mamba интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Более 30 миллионов пользователей в СНГ</li>
+                        <li>Видеочат и голосовые сообщения</li>
+                        <li>Функция "Виртуальный подарок"</li>
+                        <li>Подробные анкеты с множеством фильтров</li>
+                        <li>Система проверки профилей</li>
+                    </ul>
+                    <a href="https://mamba.ru/" class="btn" target="_blank">Скачать</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <h2>Компьютерные сервисы для знакомств</h2>
+                <p>Лучшие веб-сайты для поиска отношений на ПК</p>
+                
+                <div class="app-card">
+                    <div class="app-badge">#1</div>
+                    <h3>Match.com</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>4.7/5</span>
+                        <span class="price-tag paid">Платный</span>
+                    </div>
+                    <span class="app-platform">Компьютер</span>
+                    <p>Один из первых и самых надежных сайтов знакомств</p>
+                    <img src="https://via.placeholder.com/600x400/4361ee/ffffff?text=Match.com" alt="Match.com интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Алгоритм подбора партнеров на основе психологических тестов</li>
+                        <li>Ежедневные персонализированные предложения</li>
+                        <li>События и вечеринки для участников</li>
+                        <li>Гарантия: если не найдете партнера за 6 месяцев, получите еще 6 бесплатно</li>
+                        <li>Высокий процент серьезных отношений</li>
+                    </ul>
+                    <a href="https://www.match.com/" class="btn" target="_blank">Перейти на сайт</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-badge">#2</div>
+                    <h3>eHarmony</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>4.6/5</span>
+                        <span class="price-tag paid">Платный</span>
+                    </div>
+                    <span class="app-platform">Компьютер</span>
+                    <p>Сайт для поиска серьезных отношений и брака</p>
+                    <img src="https://via.placeholder.com/600x400/f72585/ffffff?text=eHarmony" alt="eHarmony интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Уникальный алгоритм совместимости на основе 29 параметров</li>
+                        <li>Детальная анкета из 150 вопросов</li>
+                        <li>Гарантия качества: высокий процент успешных пар</li>
+                        <li>Контроль качества профилей</li>
+                        <li>Система "Ледоколов" для начала общения</li>
+                    </ul>
+                    <a href="https://www.eharmony.com/" class="btn" target="_blank">Перейти на сайт</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-badge">#3</div>
+                    <h3>Badoo</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>4.4/5</span>
+                        <span class="price-tag freemium">Freemium</span>
+                    </div>
+                    <span class="app-platform">Компьютер</span>
+                    <p>Крупнейшая в мире сеть для знакомств с веб-версией</p>
+                    <img src="https://via.placeholder.com/600x400/3a0ca3/ffffff?text=Badoo" alt="Badoo интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Более 400 миллионов пользователей по всему миру</li>
+                        <li>Функция "Люди рядом" с геолокацией</li>
+                        <li>Верификация профилей через фото</li>
+                        <li>Игра "Encounters" для быстрого знакомства</li>
+                        <li>Видеочат и стриминг</li>
+                    </ul>
+                    <a href="https://badoo.com/" class="btn" target="_blank">Перейти на сайт</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-badge">#4</div>
+                    <h3>OkCupid</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>4.3/5</span>
+                        <span class="price-tag freemium">Freemium</span>
+                    </div>
+                    <span class="app-platform">Компьютер</span>
+                    <p>Сайт знакомств с акцентом на личностные качества</p>
+                    <img src="https://via.placeholder.com/600x400/4cc9f0/ffffff?text=OkCupid" alt="OkCupid интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Детальные вопросы для определения совместимости</li>
+                        <li>Процент совпадения по интересам и ценностям</li>
+                        <li>Разнообразие гендерных и ориентационных опций</li>
+                        <li>Блог с советами по отношениям</li>
+                        <li>Функция "DoubleTake" для более осознанного выбора</li>
+                    </ul>
+                    <a href="https://www.okcupid.com/" class="btn" target="_blank">Перейти на сайт</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-badge">#5</div>
+                    <h3>LovePlanet</h3>
+                    <div class="app-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>4.2/5</span>
+                        <span class="price-tag freemium">Freemium</span>
+                    </div>
+                    <span class="app-platform">Компьютер</span>
+                    <p>Популярный сайт знакомств в России и СНГ</p>
+                    <img src="https://via.placeholder.com/600x400/7209b7/ffffff?text=LovePlanet" alt="LovePlanet интерфейс" class="app-image">
+                    <ul class="app-features">
+                        <li>Более 20 миллионов пользователей в СНГ</li>
+                        <li>Детальные фильтры поиска</li>
+                        <li>Функция "Гость" для анонимного просмотра</li>
+                        <li>Виртуальные подарки и рейтинги</li>
+                        <li>Мобильное приложение с синхронизацией</li>
+                    </ul>
+                    <a href="https://loveplanet.ru/" class="btn" target="_blank">Перейти на сайт</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ad-block">
+            Тут могла быть ваша реклама<br>
+            <small>Разместите рекламу в нашем <a href="https://t.me/MillsCome" style="color: var(--primary);">Telegram-канале</a></small>
+        </div>
+        
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="https://t.me/MillsCome" class="btn" target="_blank" style="background: linear-gradient(135deg, #0088cc, #005580);">Подписаться на Telegram-канал</a>
+            <p style="margin-top: 1rem;">Присоединяйтесь к нашему каналу, чтобы первыми узнавать о новых обзорах и полезных материалах!</p>
+        </div>
+        
+        <div class="ad-block">
+            <h3>Какой сервис для знакомств выбрать?</h3>
+            <p><strong>Для смартфона:</strong> Tinder - для быстрых знакомств, Bumble - для женщин, которые хотят контролировать общение, Mamba - для русскоязычной аудитории.</p>
+            <p><strong>Для компьютера:</strong> Match.com и eHarmony - для серьезных отношений, Badoo - для международных знакомств, LovePlanet - для СНГ.</p>
+            <p>Больше советов и сравнений в нашем <a href="https://t.me/MillsCome" style="color: var(--primary); font-weight: bold;">Telegram-канале</a>!</p>
+        </div>
+        
+        <div class="app-card" style="margin-top: 2rem;">
+            <h3>Сравнительная таблица сервисов</h3>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                    <thead>
+                        <tr style="background-color: var(--primary); color: white;">
+                            <th style="padding: 12px; text-align: left;">Сервис</th>
+                            <th style="padding: 12px; text-align: left;">Тип</th>
+                            <th style="padding: 12px; text-align: left;">Цена</th>
+                            <th style="padding: 12px; text-align: left;">Аудитория</th>
+                            <th style="padding: 12px; text-align: left;">Лучшее для</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">Tinder</td>
+                            <td style="padding: 12px;">Мобильное</td>
+                            <td style="padding: 12px;">Freemium</td>
+                            <td style="padding: 12px;">18-35 лет</td>
+                            <td style="padding: 12px;">Быстрые знакомства</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">Bumble</td>
+                            <td style="padding: 12px;">Мобильное</td>
+                            <td style="padding: 12px;">Freemium</td>
+                            <td style="padding: 12px;">20-40 лет</td>
+                            <td style="padding: 12px;">Женщины инициативы</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">Match.com</td>
+                            <td style="padding: 12px;">Компьютер</td>
+                            <td style="padding: 12px;">Платный</td>
+                            <td style="padding: 12px;">25-50+ лет</td>
+                            <td style="padding: 12px;">Серьезные отношения</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">eHarmony</td>
+                            <td style="padding: 12px;">Компьютер</td>
+                            <td style="padding: 12px;">Платный</td>
+                            <td style="padding: 12px;">30-60+ лет</td>
+                            <td style="padding: 12px;">Брак и долгосрочные отношения</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">Mamba</td>
+                            <td style="padding: 12px;">Мобильное/ПК</td>
+                            <td style="padding: 12px;">Freemium</td>
+                            <td style="padding: 12px;">18-45 лет</td>
+                            <td style="padding: 12px;">Русскоязычная аудитория</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <footer style="text-align: center; padding: 2rem; color: var(--dark); font-size: 0.9rem; margin-top: 2rem;">
+        <p>© 2024 MillsCome. Все права защищены.</p>
+        <p><a href="https://golpool092.github.io/main/" style="color: var(--primary);">Вернуться на главную</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация элементов
+            const cards = document.querySelectorAll('.category-card, .app-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+
+            // Анимация логотипа
+            const logo = document.querySelector('.logo');
+            setTimeout(() => {
+                logo.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    logo.style.transform = 'scale(1)';
+                }, 300);
+            }, 1000);
+
+            // Обработка кнопок
+            document.querySelectorAll('.btn-disabled').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert('Этот раздел в разработке. Следите за обновлениями в нашем Telegram-канале!');
+                });
+            });
+        });
+        
+        // Тёмная тема
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Проверяем сохранённую тему
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<span>☀️</span> Светлая тема';
+        }
+
+        // Обработчик переключения
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                themeToggle.innerHTML = '<span>☀️</span> Светлая тема';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                themeToggle.innerHTML = '<span>🌙</span> Тёмная тема';
+            }
+        });
+    </script>
+</body>
+</html>
